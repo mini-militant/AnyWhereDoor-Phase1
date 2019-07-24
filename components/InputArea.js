@@ -2,17 +2,20 @@ import React from 'react'
 
 class InputArea extends React.Component{
   state={
-    textAreaText:''
+    textAreaText:'',
+    Clicked:false
   }
 
   handleChange=(event)=>{
     this.setState({textAreaText:event.target.value})
   }
-
+  
   handleClick=(event)=>{
-    event.preventDefault();
-    this.state.textAreaText!=null?<p>{this.state.textAreaText}</p>:console.log("write something");
-    console.log("hi");
+    event.preventDefault();  
+    console.log(this.state.textAreaText)
+    this.setState({
+      Clicked:true
+    })               
   }
 
   render(){
@@ -23,12 +26,12 @@ class InputArea extends React.Component{
           Essay:
           <textarea rows="8"
             cols="120"
-            placeholder="Write.."
+            placeholder="Write..."
             onChange={this.handleChange}
              />
         </label>
         <button onClick={this.handleClick}>Submit</button>
-        
+        {this.state.Clicked && <p> {this.state.textAreaText}</p>} 
       </form>
     </div>
 
