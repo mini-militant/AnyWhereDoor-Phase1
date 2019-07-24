@@ -2,26 +2,37 @@ import React from 'react'
 
 class InputArea extends React.Component{
   state={
-    textAreaText:"si"
+    textAreaText:''
   }
 
-  inputChange(e){
-    e.preventDefault();
-    const textAreaInput=e.target.value;
-    console.log(textAreaInput);
-    this.setState({
-      textAreaText:"wi"
-    })
+  handleChange=(event)=>{
+    this.setState({textAreaText:event.target.value})
+  }
+
+  handleClick=(event)=>{
+    event.preventDefault();
+    this.state.textAreaText!=null?<p>{this.state.textAreaText}</p>:console.log("write something");
+    console.log("hi");
   }
 
   render(){
     return(
       <div>
-      <input type="textarea"
-      onChange={this.inputChange}
-       placeholder="Write your heart out.."/>
-       <p>{this.state.textAreaText}</p>
-      </div>
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Essay:
+          <textarea rows="8"
+            cols="120"
+            placeholder="Write.."
+            onChange={this.handleChange}
+             />
+        </label>
+        <button onClick={this.handleClick}>Submit</button>
+        
+      </form>
+    </div>
+
+      
     );
   }
 }
