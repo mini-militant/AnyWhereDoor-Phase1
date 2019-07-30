@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '@material-ui/core/Button';
 
 class InputArea extends React.Component{
   state={
@@ -30,8 +31,11 @@ class InputArea extends React.Component{
             onChange={this.handleChange}
              />
         </label>
-        <button onClick={this.handleClick}>Submit</button>
+        <Button onClick={this.handleClick} variant="contained" color="primary">
+        Submit
+        </Button>
         {this.state.Clicked && <p> {this.state.textAreaText}</p>} 
+        
       </form>
     </div>
 
