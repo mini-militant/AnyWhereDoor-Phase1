@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '@material-ui/core/Button';
 import ReactDom from 'react-dom'
-
+import Navbar from './Navbar'
 
 class InputArea extends React.Component{
   state={
@@ -26,6 +26,7 @@ class InputArea extends React.Component{
   render(){
     return(
       <div>
+      <Navbar/>
       <form onSubmit={this.handleSubmit}>
         <label>
           Essay:
