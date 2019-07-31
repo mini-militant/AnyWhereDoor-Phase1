@@ -35,7 +35,6 @@ class InputArea extends React.Component{
       
       <form >
         <label>
-          Essay:
           <textarea 
             rows="8"
             cols="120"
