@@ -1,5 +1,7 @@
 import React from 'react'
 import Button from '@material-ui/core/Button';
+import ReactDom from 'react-dom'
+
 
 class InputArea extends React.Component{
   state={
@@ -19,6 +21,8 @@ class InputArea extends React.Component{
     })               
   }
 
+   
+
   render(){
     return(
       <div>
@@ -31,12 +35,13 @@ class InputArea extends React.Component{
             onChange={this.handleChange}
              />
         </label>
-        <Button onClick={this.handleClick} variant="contained" color="primary">
-        Submit
+        <Button variant="contained" color="primary" onClick={this.handleClick}>
+          Hello World
         </Button>
         {this.state.Clicked && <p> {this.state.textAreaText}</p>} 
         
       </form>
+      
     </div>
 
       
