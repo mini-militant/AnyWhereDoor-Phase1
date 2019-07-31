@@ -2,23 +2,29 @@ import React from 'react'
 import Button from '@material-ui/core/Button';
 import ReactDom from 'react-dom'
 import Navbar from './Navbar'
-
+import List from './List'
 class InputArea extends React.Component{
+  //items - to store every message that we are passing
+  //term - to store what we are passing in textArea 
   state={
-    textAreaText:'',
-    Clicked:false
+    items:[],
+    term:''    
   }
 
   handleChange=(event)=>{
-    this.setState({textAreaText:event.target.value})
+    this.setState({term:event.target.value})
   }
   
-  handleClick=(event)=>{
-    event.preventDefault();  
-    console.log(this.state.textAreaText)
+  
+  //Cleans the input field after a submit action is triggered
+  //Pushes every term to our array of items after submit
+
+  addMessage=(event)=>{
+    event.preventDefault();
     this.setState({
-      Clicked:true
-    })               
+      term:'',
+      items:[...this.state.items,this.state.term]
+    })
   }
 
    
@@ -27,25 +33,23 @@ class InputArea extends React.Component{
     return(
       <div>
       <Navbar/>
-      <form onSubmit={this.handleSubmit}>
+      <form >
         <label>
           Essay:
-          <textarea rows="8"
+          <textarea 
+            rows="8"
             cols="120"
             placeholder="Write..."
+            value={this.state.term}
             onChange={this.handleChange}
              />
         </label><br/>
-        <Button variant="contained" color="primary" onClick={this.handleClick}>
-          Hello World
-        </Button>
-        {this.state.Clicked && <p> {this.state.textAreaText}</p>} 
-        
+        <Button  onClick= {this.addMessage} variant="contained" color="primary" >
+          Submit
+        </Button>        
       </form>
-      
-    </div>
-
-      
+      <List items={this.state.items}/>
+    </div>      
     );
   }
 }
