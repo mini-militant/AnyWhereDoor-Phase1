@@ -3,6 +3,8 @@ import Button from '@material-ui/core/Button';
 import ReactDom from 'react-dom'
 import Navbar from './Navbar'
 import List from './List'
+import ListCard from './ListCard'
+
 class InputArea extends React.Component{
   //items - to store every message that we are passing
   //term - to store what we are passing in textArea 
@@ -48,6 +50,7 @@ class InputArea extends React.Component{
         </Button>        
       </form>
       <List items={this.state.items}/>
+      <ListCard/>
     </div>      
     );
   }

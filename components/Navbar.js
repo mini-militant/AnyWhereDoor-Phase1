@@ -155,6 +155,7 @@ export default function Navbar() {
         <div className={classes.drawerHeader} />
         <Typography paragraph>
           <InputArea/>
+          
         </Typography>
         
       </main>
