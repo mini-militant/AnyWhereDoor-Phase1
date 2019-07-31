@@ -32,7 +32,7 @@ class InputArea extends React.Component{
   render(){
     return(
       <div>
-      <Navbar/>
+      
       <form >
         <label>
           Essay:

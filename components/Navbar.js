@@ -17,6 +17,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import InputArea from './InputArea'
 
 const drawerWidth = 240;
 
@@ -153,11 +154,9 @@ export default function Navbar() {
       >
         <div className={classes.drawerHeader} />
         <Typography paragraph>
-          Lorem ipsum dolor 
+          <InputArea/>
         </Typography>
-        <Typography paragraph>
-          Consequat mauris nu
-        </Typography>
+        
       </main>
     </div>
   );
