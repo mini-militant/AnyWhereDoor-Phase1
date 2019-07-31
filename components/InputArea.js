@@ -35,7 +35,7 @@ class InputArea extends React.Component{
             placeholder="Write..."
             onChange={this.handleChange}
              />
-        </label>
+        </label><br/>
         <Button variant="contained" color="primary" onClick={this.handleClick}>
           Hello World
         </Button>
