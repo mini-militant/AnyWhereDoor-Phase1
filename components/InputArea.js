@@ -50,7 +50,7 @@ class InputArea extends React.Component{
         </Button>        
       </form>
       <List items={this.state.items}/>
-      <ListCard/>
+      <ListCard items={this.state.items}/>
     </div>      
     );
   }

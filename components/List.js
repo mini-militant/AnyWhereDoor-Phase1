@@ -1,11 +1,12 @@
 import React from 'react'
+import ListCard from './ListCard'
 const List = (props)=>{
  return( 
-   <ul>
+   <div>
     {
-      props.items.map((item,index)=><li key={index}>{item}</li>)
+      props.items.map((item,index)=><ListCard key={index} item={item}/>)
     }
-  </ul>
+  </div>
  )
 }
 
