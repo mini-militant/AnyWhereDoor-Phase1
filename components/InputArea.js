@@ -49,8 +49,7 @@ class InputArea extends React.Component{
           Submit
         </Button>        
       </form>
-      <List items={this.state.items}/>
-      <ListCard items={this.state.items}/>
+      <List items={this.state.items}/>      
     </div>      
     );
   }

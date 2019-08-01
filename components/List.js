@@ -4,7 +4,9 @@ const List = (props)=>{
  return( 
    <div>
     {
-      props.items.map((item,index)=><ListCard key={index} item={item}/>)
+      props.items.map((item,index)=>
+      <ListCard key={index} item={item}
+      />)
     }
   </div>
  )
