@@ -37,9 +37,10 @@ export default function ListCard(props) {
           {props.item}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small"><Like/></Button>
-      </CardActions>
+      <Like/>
+   {/*   <CardActions>
+        <Button size="small"></Button>
+      </CardActions> */}
     </Card>
   );
 }
