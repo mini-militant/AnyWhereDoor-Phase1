@@ -25,11 +25,12 @@ class Like extends React.Component{
         <Button size="small" 
         onClick={this.updateIconChecking}>
 
-            { this.state.iconChecked ? <i class="material-icons">
-            favorite_border
-            </i> :
+            { this.state.iconChecked ? 
             <i class="material-icons">
             favorite
+            </i> :
+            <i class="material-icons">
+            favorite_border
             </i>
         }
         </Button>  
