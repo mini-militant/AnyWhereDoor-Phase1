@@ -110,7 +110,7 @@ export default function Navbar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            App Title
+              ToDo App
           </Typography>
         </Toolbar>
       </AppBar>
